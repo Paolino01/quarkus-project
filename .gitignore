@@ -1,41 +1,45 @@
+#Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
-pom.xml.next
 release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
+.flattened-pom.xml
 
-# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
-!/.mvn/wrapper/maven-wrapper.jar
-
-.gradle/
-build/
-.gradletasknamecache
-
-*.log
-graph-output.dot
-
-.settings
-.vscode
+# Eclipse
 .project
 .classpath
-*.iml
+.settings/
+bin/
+
+# IntelliJ
 .idea
+*.ipr
+*.iml
+*.iws
+
+# NetBeans
+nb-configuration.xml
+
+# Visual Studio Code
+.vscode
 .factorypath
 
-settings.xml
-quarkus.log
-
-bin/
+# OSX
 .DS_Store
-ObjectStore
 
-lsp/
-
+# Vim
 *.swp
 *.swo
 
-.quarkus
+# patch
+*.orig
+*.rej
+
+# Local environment
+.env
+
+# Plugin directory
+/.quarkus/cli/plugins/
+# TLS Certificates
+.certs/
