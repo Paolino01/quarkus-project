@@ -14,6 +14,15 @@ import java.util.List;
 @Entity
 @Table(name = "film", schema = "sakila")
 public class Film {
+    public Film() {}
+
+    // In order to use projection, I have to create a constructor with the parameters used in the projection
+    public Film(short filmId, String title, short length) {
+        this.filmId = filmId;
+        this.title = title;
+        this.length = length;
+    }
+
     @Id
     @Column(name = "film_id", nullable = false)
     private Short filmId;
@@ -144,6 +153,14 @@ public class Film {
 
     public void setLastUpdate(Instant lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    public List<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
     }
 
 }
